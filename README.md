@@ -64,6 +64,7 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 
 ### Bar Chart
 
-
+![Sentiment_Analysis_Yelp_Bar_Chart](/images/Sentiment_Analysis_Yelp_Bar_Chart.png)
 
 ### Pie Chart
+![Sentiment_Analysis_Yelp_Pie_Chart](/images/Sentiment_Analysis_Yelp_Pie_Chart.png)
