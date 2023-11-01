@@ -68,3 +68,11 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 
 ### Pie Chart
 ![Sentiment_Analysis_Yelp_Pie_Chart](/images/Sentiment_Analysis_Yelp_Pie_Chart.png)
+
+## Step 8 - Save the Sentiment Analysis Data in CSV and a SQL Server Database
+- Save the Dataframe with the Sentiment Analysis to CSV file and a SQL Server Table for future analytics
+- The program first checks if the CSV file exists if it does the data is Appended else the file is created.
+- The program then checks if there is a Table called Sentiment_Analysis and if not creates the table else appends the rows.
+
+## Step 9 - Save the Sentiment Analysis Data in MongoDB 
+- Save the Dataframe with the Sentiment Analysis to a MongoDB Database Collection
