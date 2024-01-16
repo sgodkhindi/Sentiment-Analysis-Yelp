@@ -84,3 +84,12 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 
 ## Step 10 - Create Visualizations in Power BI using the Data from SQL Server / MongoDB  (External to Python Environment)
 - Using the data stored in the SQL Server table (Step #8) or MongoDB (Step #9) create visualizations in Power BI.
+- The following Visualizations are created:
+  ### Map View of Negative-Postive Emotion for the Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/MapView.PNG)
+  ### Bar Chart Showing the Top 5 Positive Emotions for Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/Top5Positive.PNG)
+  ### Bar Chart Showing the Top 5 Negative Emotions for Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/Top5Negative.PNG)
+  ### Pie Chart Showing the Distribution of All Emotions for Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/EmotionDist.PNG)
