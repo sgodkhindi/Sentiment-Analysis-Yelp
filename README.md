@@ -16,9 +16,8 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 4. Then using the Yelp Reviews API, extract all the reviews for each of the locations extracted in Step 3.
 5. Using Huggingface and other NLP libraries, perform Sentiment Analysis on the review text.
 6. Present a graph of the top ranking Sentiments.
-
-
-
+7. Save data in CSV, SQL Server or MongoDB
+8. Create Visualizations in Power BI (or Tableau)
 
 ## Step 1 - Input Brand & City and Extract Brand Locations
 - Prompt and get City and Brand to be analyzed
