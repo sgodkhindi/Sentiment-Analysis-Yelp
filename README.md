@@ -16,9 +16,8 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 4. Then using the Yelp Reviews API, extract all the reviews for each of the locations extracted in Step 3.
 5. Using Huggingface and other NLP libraries, perform Sentiment Analysis on the review text.
 6. Present a graph of the top ranking Sentiments.
-
-
-
+7. Save data in CSV, SQL Server or MongoDB
+8. Create Visualizations in Power BI (or Tableau)
 
 ## Step 1 - Input Brand & City and Extract Brand Locations
 - Prompt and get City and Brand to be analyzed
@@ -72,7 +71,25 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 ## Step 8 - Save the Sentiment Analysis Data in CSV and a SQL Server Database
 - Save the Dataframe with the Sentiment Analysis to CSV file and a SQL Server Table for future analytics
 - The program first checks if the CSV file exists if it does the data is Appended else the file is created.
-- The program then checks if there is a Table called Sentiment_Analysis and if not creates the table else appends the rows.
+- Next, using SQLAlchemy and ODBC connection, the program connects to the MS SQL Server database, SentimentAnalysis. 
+- The program then checks if there is a Table called Sentiment_Analysis in the DB.
+- If table does not exist, the program creates the table else appends the rows to the existing table.
 
-## Step 9 - Save the Sentiment Analysis Data in MongoDB 
+## Step 9 - Save the Sentiment Analysis Data in MongoDB (Additional Optional Step)
 - Save the Dataframe with the Sentiment Analysis to a MongoDB Database Collection
+- For that, the Pandas Dataframe is converted to a Dictonary.
+- A MongoDB database connection is created.
+- A Collection within that MongoDB database is created.
+- The Dictionary is then written to the Collection.
+
+## Step 10 - Create Visualizations in Power BI using the Data from SQL Server / MongoDB  (External to Python Environment)
+- Using the data stored in the SQL Server table (Step #8) or MongoDB (Step #9) create visualizations in Power BI.
+- The following Visualizations are created:
+  ### Map View of Negative-Postive Emotion for the Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/MapView.PNG)
+  ### Bar Chart Showing the Top 5 Positive Emotions for Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/Top5Positive.PNG)
+  ### Bar Chart Showing the Top 5 Negative Emotions for Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/Top5Negative.PNG)
+  ### Pie Chart Showing the Distribution of All Emotions for Brand Across US Cities
+  ![Sentiment_Analysis_Yelp_Bar_Chart](/images/EmotionDist.PNG)
