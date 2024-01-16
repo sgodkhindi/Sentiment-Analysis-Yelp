@@ -72,7 +72,16 @@ The main data source for this Sentiment Analysis program are Yelp APIs. There ar
 ## Step 8 - Save the Sentiment Analysis Data in CSV and a SQL Server Database
 - Save the Dataframe with the Sentiment Analysis to CSV file and a SQL Server Table for future analytics
 - The program first checks if the CSV file exists if it does the data is Appended else the file is created.
-- The program then checks if there is a Table called Sentiment_Analysis and if not creates the table else appends the rows.
+- Next, using SQLAlchemy and ODBC connection, the program connects to the MS SQL Server database, SentimentAnalysis. 
+- The program then checks if there is a Table called Sentiment_Analysis in the DB.
+- If table does not exist, the program creates the table else appends the rows to the existing table.
 
-## Step 9 - Save the Sentiment Analysis Data in MongoDB 
+## Step 9 - Save the Sentiment Analysis Data in MongoDB (Additional Optional Step)
 - Save the Dataframe with the Sentiment Analysis to a MongoDB Database Collection
+- For that, the Pandas Dataframe is converted to a Dictonary.
+- A MongoDB database connection is created.
+- A Collection within that MongoDB database is created.
+- The Dictionary is then written to the Collection.
+
+## Step 10 - Create Visualizations in Power BI using the Data from SQL Server / MongoDB  (External to Python Environment)
+- Using the data stored in the SQL Server table (Step #8) or MongoDB (Step #9) create visualizations in Power BI.
